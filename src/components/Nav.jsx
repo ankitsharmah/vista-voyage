@@ -185,7 +185,7 @@ const Nav = () => {
           <>
             <div className="md:hidden block">
               <button onClick={() => setnotLoggedIn((prev) => !prev)}>
-                <GiHamburgerMenu className="md:hidden block text-white" />
+                <GiHamburgerMenu className="md:hidden block text-white h-[2rem] w-[3rem]" />
               </button>
               {notLoggedIn && (
                 <div className="bg-white/50 md:hidden  absolute top-10 max-h-max right-0 p-3 gap-2  rounded shadow-md flex flex-col">
