@@ -43,7 +43,7 @@ const Location = () => {
           </div>
                     
           </div> :
-      <div className='flex flex-col  '> <h1 className='text-4xl mt-[2.7rem] text-center md:mt-[4rem] p-2 text-yellow-500/90 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
+      <div className='flex flex-col  '> <h1 className='text-4xl mt-[4rem] text-center md:mt-[4rem] p-2 text-yellow-500/90 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
       <div className='  min-h-[100vh]  flex  justify-center w-full  '>
      
       <div className="flex flex-wrap justify-center gap-2 w-[98%] md:w-full">
