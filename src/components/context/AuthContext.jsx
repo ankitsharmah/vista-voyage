@@ -70,6 +70,9 @@ export function AuthProvider({ children }) {
       // Token is valid or not present, continue with your component logic
       console.log("Token is valid");
       console.log(localStorage.getItem("token"));
+      if(!localStorage.getItem("token")){
+        return;
+      }
       const decodedToken = jwtDecode(localStorage.getItem("token"));
 
       if (decodedToken.role === "ADMIN") {
