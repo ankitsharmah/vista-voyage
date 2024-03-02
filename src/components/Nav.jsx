@@ -20,12 +20,12 @@ const Nav = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [notLoggedIn, setnotLoggedIn] = useState(false);
   return (
-    <div className="w-full fixed z-20 top-0 left-0  bg-[#1e2a588e] h-[2.7rem]  flex justify-center  backdrop-opacity-50 backdrop-filter backdrop-blur-md md:h-[4rem] ">
+    <div className="w-full fixed z-20 top-0 left-0  bg-[#1e2a588e] h-[3.7rem]  flex justify-center  backdrop-opacity-50 backdrop-filter backdrop-blur-md md:h-[4rem] ">
       <div className="w-[90%] h-full  flex justify-between items-center object-cover ">
        <NavLink to={"/"}> <img
           src={napStay}
           alt=""
-          className=" h-[2rem] sm:h-[3rem] sm: object-cover"
+          className=" h-[2.89rem] md:h-[3rem] sm:h-[3rem] sm: object-cover"
         />
 </NavLink>
         <div className="hidden md:flex  gap-4 mid-menu ">
@@ -74,7 +74,7 @@ const Nav = () => {
               onClick={() => setIsOpen2((prev) => !prev)}
               className="text-white flex items-center"
             >
-              <GiHamburgerMenu className="md:hidden block " />
+              <GiHamburgerMenu className="md:hidden block  h-[1.8rem] w-[3rem]" />
               <FaRegCircleUser className="text-2xl mr-2 md:block hidden" />
               <span className="capitalize hidden lg:inline-block">
                 {auth.userdata.firstName}
