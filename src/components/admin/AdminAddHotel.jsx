@@ -44,7 +44,7 @@ const AdminAddHotel = () => {
     console.log("this is a haeader at add hotel ",headers)
     console.log('this is to be sent to hotel ',hotelData)
     try {
-      const response = await axios.post('http://localhost:9191/api/v1/admin/add-hotel', formData,headers);
+      const response = await axios.post(`${auth.BASE_URL}/api/v1/admin/add-hotel`, formData,headers);
 
       console.log('Hotel added successfully:', response.data);
       navigate('/admin/home')

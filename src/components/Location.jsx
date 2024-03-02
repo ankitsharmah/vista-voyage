@@ -4,12 +4,14 @@ import Nav from './Nav';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import HotelCard from './common/HotelCard'; // Import the HotelCard component
+import { useAuth } from './context/AuthContext';
 
 const Location = () => {
   const { id, locationName } = useParams();
   const [hotels, setHotels] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [LId,setLId]=useState(id);
+  const auth = useAuth();
   useEffect(() => {
     fetchData();
   }, [id]);
@@ -18,7 +20,7 @@ const Location = () => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`http://localhost:9191/api/v1/locations/location/${id}`);
+      const response = await axios.get(`${auth.BASE_URL}/api/v1/locations/location/${id}`);
       setHotels(response.data.hotels);
     //   console.log("called");
       setIsLoading(false);

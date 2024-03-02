@@ -55,7 +55,7 @@ const AddRoomPage = () => {
     );
 
     try {
-      const response = await axios.post(`http://localhost:9191/api/v1/admin/add-room`, formData,headers);
+      const response = await axios.post(`${auth.BASE_URL}/api/v1/admin/add-room`, formData,headers);
       navigate("/admin/home")
       console.log(response.data);
     } catch (error) {

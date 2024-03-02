@@ -117,7 +117,7 @@ const Profile = ({ loggedInUser }) => {
     e.preventDefault();
     const headers=auth.getHeaders();
     try {
-      const response = await axios.put(`http://localhost:9191/api/v3/user/update-user/${auth.userdata.userId}`,formData,headers)
+      const response = await axios.put(`${auth.BASE_URL}/api/v3/user/update-user/${auth.userdata.userId}`,formData,headers)
       // localStorage.setItem('token',response.data)
       console.log(response.data);
       navigate('/');

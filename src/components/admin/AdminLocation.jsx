@@ -5,9 +5,10 @@ import HotelCard from '../common/HotelCard';
 import AdminNavBar from './AdminNavBar';
 import AdminHotelCard from './AdminHotelCard';
 import { TfiPlus } from 'react-icons/tfi';
+import { useAuth } from '../context/AuthContext';
 
 const AdminLocation = () => {
-    
+    const auth = useAuth();
     const { id, locationName } = useParams();
     const [hotels, setHotels] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +21,7 @@ const AdminLocation = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`http://localhost:9191/api/v1/locations/location/${id}`);
+        const response = await axios.get(`${auth.BASE_URL}/api/v1/locations/location/${id}`);
         setHotels(response.data.hotels);
       //   console.log("called");
         setIsLoading(false);

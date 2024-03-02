@@ -19,6 +19,9 @@ export function AuthProvider({ children }) {
   const [HotelForBooking, setHotelForBooking] = useState({});
   const [RoomId, setRoomId] = useState(0);
   const [AdminLocations, setAdminLocations] = useState([]);
+
+  const BASE_URL = 'https://hotelbackend.up.railway.app';
+
   const value = {
     isAuthorized,
     AdminIsAuthorized,
@@ -33,6 +36,7 @@ export function AuthProvider({ children }) {
     AdminLocations,
     getAdminLocations,
     adminSignIn,
+    BASE_URL
   };
 
   function getHeaders() {
@@ -47,8 +51,9 @@ export function AuthProvider({ children }) {
     fetchDataFromApi();
   }, []);
   function fetchDataFromApi() {
+    // console.log(`${BASE_URL}/api/v1/locations`)
     axios
-      .get("http://localhost:9191/api/v1/locations")
+      .get(`${BASE_URL}/api/v1/locations`)
       .then((response) => {
         setLocationData(response.data);
         // console.log("Response:", response.data);
@@ -88,7 +93,7 @@ export function AuthProvider({ children }) {
     console.log("this is called from booking");
     try {
       const response = await axios.get(
-        `http://localhost:9191/api/v1/rooms/room-by-id/${RoomId}`,
+        `${BASE_URL}/api/v1/rooms/room-by-id/${RoomId}`,
         getHeaders()
       );
       setHotelForBooking(response.data);
@@ -165,7 +170,7 @@ export function AuthProvider({ children }) {
     try {
       console.log("in getLocation");
       const response = await axios.get(
-        "http://localhost:9191/api/v1/admin/All-location",
+        `${BASE_URL}/api/v1/admin/All-location`,
         headers
       );
       setAdminLocations(response.data);

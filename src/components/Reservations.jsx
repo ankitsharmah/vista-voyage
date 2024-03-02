@@ -20,7 +20,7 @@ const Reservations = () => {
       console.log("Headers:", headers);
   
       const response = await axios.get(
-        `http://localhost:9191/api/v3/user/get-by-id/${userId}`,
+        `${auth.BASE_URL}/api/v3/user/get-by-id/${userId}`,
         headers
       );
   
@@ -44,7 +44,7 @@ async function cancelReservation(res){
     
 try {
   setIsLoading(true);
-  const response = await axios.put(`http://localhost:9191/api/v3/user/delete-reservation-by-id/${userId}/${res}`,{},headers)
+  const response = await axios.put(`${auth.BASE_URL}/api/v3/user/delete-reservation-by-id/${userId}/${res}`,{},headers)
   console.log(response," this is response")
   window.location.reload();
   setIsLoading(false);

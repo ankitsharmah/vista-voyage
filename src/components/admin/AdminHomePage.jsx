@@ -47,7 +47,7 @@ const deleteLocation =async (id)=>{
     return;
   }
   try {
-    const response = await axios.delete(`http://localhost:9191/api/v1/admin/delete-by-id/${id}`,headers)
+    const response = await axios.delete(`${auth.BASE_URL}/api/v1/admin/delete-by-id/${id}`,headers)
     console.log("this is response ",response);
     // alert("location has been deleted");
     window.location.reload();

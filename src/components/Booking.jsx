@@ -67,7 +67,7 @@ const Booking = () => {
           console.log("Booking Data:", formData);
           const headers = auth.getHeaders();
 
-          const response = await axios.post(`http://localhost:9191/api/v1/reservation/create/${roomId}/${auth.userdata.userId}`, formData,
+          const response = await axios.post(`${auth.BASE_URL}/api/v1/reservation/create/${roomId}/${auth.userdata.userId}`, formData,
           headers);
           setIsLoading(false);
             console.log("Response:", response.data);

@@ -37,7 +37,7 @@ const SignupPage = ({ setLoggedInUser }) => {
         // setLoading(true);
     
         // Wait for the response from the server
-        const response = await axios.post("http://localhost:9191/api/v1/auth/register", formData);
+        const response = await axios.post(`${auth.BASE_URL}/api/v1/auth/register`, formData);
     
         localStorage.setItem('token', response.data.token);
         console.log("this is signup")

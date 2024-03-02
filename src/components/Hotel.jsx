@@ -21,7 +21,7 @@ const Hotel = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:9191/api/v1/hotels/hotel-by-id/${hotelId}`);
+      const response = await axios.get(`${auth.BASE_URL}/api/v1/hotels/hotel-by-id/${hotelId}`);
       console.log("this is response data of hotel by id : ",response.data);
       setHotelData(response.data);
     } catch (error) {
