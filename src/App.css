@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* write your css here */
+
+*{
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.h{
+   background: #d8addf;  /* fallback for old browsers */
+ 
+   background: linear-gradient(to right, #d6f9fac2, #f4e7f6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+
+}
+.bb{
+   background-color: #f1f3f4d6;
+/* background-image: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%); */
+
+}
+.nav-Login{
+    /* background:red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 15%; */
+    height: 100%;
+}
+*::-webkit-scrollbar {
+width: 7px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3; 
+}
+@media (min-width: 320px) {
+  /* Adjust the breakpoint as needed */
+  * {
+    /* scrollbar-width: none; */
+  }
+}
+
+.d:hover{
+transform: translateY(4%);
+transition: all 250ms ease-in-out;
+ background-color: rgba(93, 93, 216, 0.239);
+}
+.u:hover{
+transform: translateY(-4%);
+transition: all 250ms ease-in-out;
+background-color: rgba(93, 93, 216, 0.239);
+}
+.u{
+   backdrop-filter: blur(10px);
+  
+}
+
+.nav {
+    /* background-color: rgb(214, 205, 205); Adjust the alpha (transparency) as needed */
+    border-bottom: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.4);
+   
+}
+.trans{
+    background: linear-gradient(135deg, #d8dadf73, #c1bac774);
+     backdrop-filter: blur(8px);
+     -webkit-backdrop-filter: blur(8px); 
+      border-radius: 20px;
+      outline: none;
+      border: 1px solid rgb(180, 180, 180);
+
+    
+
+}
+.bg{
+    
+        border: none;
+        background:url(./components/assests/login-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+ 
+}
+.spinner {
+    width: 11.2px;
+    height: 11.2px;
+    animation: spinner-o824ag 1s infinite linear;
+ }
+ 
+ /* Add these styles in your main CSS file or use a CSS-in-JS solution like styled-components */
+
+.hotel-card {
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   overflow: hidden;
+   margin-bottom: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .hotel-image {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+ }
+ 
+ .hotel-details {
+   padding: 16px;
+ }
+ 
+ .custom-loader {
+  width:14px;
+  height:14px;
+  background: #0020EA;
+  border-radius: 50%;
+  box-shadow: 20px 0 #0020EA22,-20px 0 #0020EA;
+  animation:d5 1.2s infinite linear alternate;
+}
+@keyframes d5 {
+    0% {box-shadow: 20px 0 #0020EA,-20px 0 #0020EA22;background: #0020EA}
+    33%{box-shadow: 20px 0 #0020EA,-20px 0 #0020EA22;background: #0020EA22}
+    66%{box-shadow: 20px 0 #0020EA22,-20px 0 #0020EA;background: #0020EA22}
+}
+
+.box{
+  position: relative;
+  width: 90px;
+  height: 40px;
+  display: flex;
+  /* background: #000; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+.box span{
+display: block;
+width: 10px;
+height: 10px;
+background: #000;
+border-radius: 50%;
+animation: effect .35s linear infinite alternate;
+transform: scale(0);
+background: #002B73;
+}
+@keyframes effect {
+  100%{
+    transform: scale(.87);
+  }
+}
+.box span:nth-child(1){
+  animation-delay: .1s;
+}
+.box span:nth-child(2){
+  animation-delay: .2s;
+}
+.box span:nth-child(3){
+  animation-delay: .3s;
+}
+.box span:nth-child(4){
+  animation-delay: .4s;
+/* background: #002B73; */
+/* background: #00B9F5; */
+}
+.box span:nth-child(5){
+  animation-delay: .5s;
+/* background: #002B73; */
+/* background: #00B9F5; */
+
+}
+/* @media (max-width: 769px) {
+  .mid-menu {
+    background-color: lightgreen;
+    height: 0;
+    display: none;
+    color: white;
+    display: none;
+    height: 0;
+  }} */
+/* .mid-menu{
+
+} */
+
+
