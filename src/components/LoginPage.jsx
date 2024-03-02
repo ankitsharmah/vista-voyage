@@ -82,6 +82,8 @@ const handleSubmit = async (e) => {
           </div>
         ) : (
           <div className=" flex  trans h-max p-2 md:py-5 w-[90%] md:w-[30%] items-center justify-center  ">
+          <NavLink className={"text-white text-2xl  absolute top-0 left-[92%]"} to={"/"}>&times;</NavLink>
+            
             <form
               action=""
               onSubmit={handleSubmit}

@@ -83,6 +83,8 @@ const SignupPage = ({ setLoggedInUser }) => {
           <h1 className="text-3xl font-semibold text-white pt-3 md:pb-4">
             Create Account
           </h1>
+        
+          <NavLink className={"text-white text-2xl  absolute top-0 left-[92%]"} to={"/"}>&times;</NavLink>
           <form
             action="submit"
             onSubmit={handleSubmit}
