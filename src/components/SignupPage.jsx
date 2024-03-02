@@ -84,7 +84,7 @@ const SignupPage = ({ setLoggedInUser }) => {
             Create Account
           </h1>
         
-          <NavLink className={"text-white text-center h-13 w-8 bg-red-100 text-2xl  absolute top-0 left-[90%]"} to={"/"}>&times;</NavLink>
+          <NavLink className={"text-white text-center h-13 w-8  text-2xl  absolute top-0 left-[90%]"} to={"/"}>&times;</NavLink>
           <form
             action="submit"
             onSubmit={handleSubmit}
