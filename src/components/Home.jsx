@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <div className="">
         <img src={demo1} alt="" className="h-screen w-full  object-cover " />
-        <div className="absolute rounded-lg top-[50%] left-[10%] p-2 md:p-7 sm:top-[40%] sm:left-[15%]  text-white backdrop-blur-[7px]  md:space-y-2  text-4xl">
+        <div className="absolute rounded-lg top-[38%] left-[10%] p-2 md:p-7 sm:top-[40%] sm:left-[15%]  text-white backdrop-blur-[7px]  md:space-y-2  text-4xl">
           <p>
             {" "}
             <span className="font-semibold text-4xl sm:text-6xl">
