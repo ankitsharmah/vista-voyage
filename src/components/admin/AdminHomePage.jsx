@@ -42,9 +42,15 @@ const AdminHomePage = () => {
 
 const deleteLocation =async (id)=>{
   const headers = auth.getHeaders(); 
+ 
+  if( !window.confirm('Are you sure you want to delete')){
+    return;
+  }
   try {
     const response = await axios.delete(`http://localhost:9191/api/v1/admin/delete-by-id/${id}`,headers)
     console.log("this is response ",response);
+    // alert("location has been deleted");
+    window.location.reload();
   } catch (error) {
     console.log("this is an error ",error)
   }

@@ -82,7 +82,7 @@ try {
           </div>
                     
           </div>
-        ) :UserReservations && UserReservations.reservations && UserReservations.reservations.length > 0 ? 
+        ) :UserReservations && UserReservations.reservationsDTO && UserReservations.reservationsDTO.length > 0 ? 
         (
           <div className="container mx-auto mt-16 p-2 md:p-6 bg-white rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold mb-6 text-indigo-700 text-center shadow-lg">Your Reservations</h2>
@@ -91,7 +91,7 @@ try {
             <button onClick={choice1} className='bg-yellow-400 text-white p-2 rounded-md hover:bg-yellow-500'>UpComing</button></div> */}
 
 
-           {UserReservations.reservations     
+           {UserReservations.reservationsDTO     
     .slice()
     .sort((a, b) => new Date(a.dateTo) - new Date(b.dateTo))
     .map((reservation) =>(
@@ -133,12 +133,12 @@ try {
                 )}
 
                 {
-                  reservation.room && reservation.room.hotel && (
+                  reservation.roomDTO && reservation.roomDTO.hotelDTO && (
                   <div className="mt-2 mb-2 md:mb-0 md:mt-6">
                     <h4 className="text-lg font-semibold mb-2 text-indigo-700">Hotel Details</h4>
-                    <p className="text-gray-600">Hotel Name: {reservation.room.hotel.hotelName}</p>
+                    <p className="text-gray-600">Hotel Name: {reservation.roomDTO.hotelDTO.hotelName}</p>
                     {/* <p className="text-gray-600">Rating: {reservation.room.hotel.rating}</p> */}
-                    <p className="text-gray-600">Address: {reservation.room.hotel.address} , {reservation.room.hotel.location.locationName}</p>
+                    <p className="text-gray-600">Address: {reservation.roomDTO.hotelDTO.address} , {reservation.roomDTO.hotelDTO.locationDTO.locationName}</p>
                     </div>)
                 }
               </div>

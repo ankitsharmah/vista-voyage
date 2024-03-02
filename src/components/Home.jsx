@@ -28,7 +28,7 @@ const Home = () => {
           </p>
           <p className="font-semibold sm:text-4xl">Find,</p>
           <p className="font-semibold sm:text-5xl">Book,</p>
-          <p className="font-semibold sm:text-6xl"> and Enjoy</p>
+          <p className="font-semibold sm:text-6xl"> <span className="text-4xl font-medium">and</span> Enjoy</p>
         </div>
       </div>
 

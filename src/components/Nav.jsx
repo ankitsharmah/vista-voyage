@@ -22,12 +22,12 @@ const Nav = () => {
   return (
     <div className="w-full fixed z-20 top-0 left-0  bg-[#1e2a588e] h-[2.7rem]  flex justify-center  backdrop-opacity-50 backdrop-filter backdrop-blur-md md:h-[4rem] ">
       <div className="w-[90%] h-full  flex justify-between items-center object-cover ">
-        <img
+       <NavLink to={"/"}> <img
           src={napStay}
           alt=""
           className=" h-[2rem] sm:h-[3rem] sm: object-cover"
         />
-
+</NavLink>
         <div className="hidden md:flex  gap-4 mid-menu ">
           <NavLink className={"text-white h-full hover:underline"} to={"/"}>
             Home
