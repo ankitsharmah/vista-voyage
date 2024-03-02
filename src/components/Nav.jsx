@@ -74,7 +74,7 @@ const Nav = () => {
               onClick={() => setIsOpen2((prev) => !prev)}
               className="text-white flex items-center"
             >
-              <GiHamburgerMenu className="md:hidden block  h-[1.8rem] w-[3rem]" />
+              <GiHamburgerMenu className="md:hidden block  h-[2rem] w-[3rem]" />
               <FaRegCircleUser className="text-2xl mr-2 md:block hidden" />
               <span className="capitalize hidden lg:inline-block">
                 {auth.userdata.firstName}
