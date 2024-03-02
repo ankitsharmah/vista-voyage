@@ -62,7 +62,7 @@ const deleteLocation =async (id)=>{
   console.log("this is headers: " , headers)
   console.log("this is location",LocationName)
   try {
-    const response = await axios.post("http://localhost:9191/api/v1/admin/add-location", LocationName, headers);
+    const response = await axios.post(`${auth.BASE_URL}/api/v1/admin/add-location`, LocationName, headers);
     console.log(response);
     window.location.reload();
 
