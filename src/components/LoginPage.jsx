@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
           </div>
         ) : (
           <div className=" flex  trans h-max p-2 md:py-5 w-[90%] md:w-[30%] items-center justify-center  ">
-          <NavLink className={"text-white text-center h-13 w-8  text-2xl  absolute top-0 left-[90%]"} to={"/"}>&times;</NavLink>
+          <NavLink className={"text-white text-ForgetPassword h-13 w-8  text-2xl  absolute top-0 left-[90%]"} to={"/"}>&times;</NavLink>
             
             <form
               action=""
@@ -102,7 +102,9 @@ const handleSubmit = async (e) => {
               </div>
               <div className="md:w-[70%] ">
                 <p className="opacity-70 text-md text-white">
-                  enter your password :
+                   password :  <NavLink to={formData.email.includes("@yahoo.com") || formData.email.includes("@gmail.com") ? "/user/forgetpassword":''} onClick={()=>{auth.SetEmailId(formData.email)}} className={"text-[#ffdd00] md:text-sm md:ml-[5.4rem] ml-7 text-xs"}>
+                  forget password ?
+                </NavLink>
                 </p>
                 <input
                   type="password"
@@ -112,6 +114,9 @@ const handleSubmit = async (e) => {
                   className="transition-all duration-300 outline-none w-full rounded-md focus:rounded-none focus:rounded-t-md bg-white/20 p-2 md:p-4 border-transparent focus:border-blue-500 border-b-2"
                   placeholder="enter password"
                 />
+              
+               
+
               </div>
 
               <div className="flex justify-center items-center gap-4">

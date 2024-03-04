@@ -66,7 +66,7 @@ const AddRoomPage = () => {
   return (
     <div>
       <AdminNavBar />
-      <div className="min-h-screen  flex items-center justify-center bg-gradient-to-r from-teal-500 to-indigo-500">
+      <div className="min-h-screen  flex items-center justify-center bg-[#F7EFE5]">
         <div className="max-w-md w-full bg-white p-2 md:p-8 rounded-md shadow-md">
           <div>
             <h2 className="mt-2 md:mt-6 text-center text-xl md:text-3xl font-extrabold text-gray-900">Add Room</h2>

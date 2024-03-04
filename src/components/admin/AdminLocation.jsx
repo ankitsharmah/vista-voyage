@@ -31,7 +31,7 @@ const AdminLocation = () => {
     };
   
     return (
-      <div className='bg-red-200 max-h-max w-full'>
+      <div className='bg-[#F7EFE5] max-h-max w-full'>
       <AdminNavBar />
         {isLoading?    <div className='w-full h-screen flex justify-center items-center'>
             
@@ -47,7 +47,7 @@ const AdminLocation = () => {
         <div className='flex flex-col  '> <h1 className='text-4xl mt-[] text-center  p-2 text-indigo-600 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
         <div className='  min-h-[100vh]  flex  justify-center w-full  '>
        
-        <div className="flex flex-wrap items-center justify-center gap-2 w-[98%] md:w-full">
+        <div className="flex flex-wrap itemsce  justify-center gap-2 w-[98%] md:w-full">
             {hotels.map((hotel) => (
               <AdminHotelCard key={hotel.hotelId} hotel={hotel} Id={id} lName={locationName} />
             ))}

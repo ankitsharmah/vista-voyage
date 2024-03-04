@@ -15,6 +15,7 @@ import AdminAddHotel from "./components/admin/AdminAddHotel";
 import AdminHomePage from "./components/admin/AdminHomePage";
 import AddRoomPage from "./components/admin/AddRoomPage ";
 import AdminLocation from "./components/admin/AdminLocation";
+import ForgetPassword from "./components/ForgetPassword";
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [location,setLocation] =  useState(null);
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/admin/home" element={<AdminHomePage/>} />
         <Route path="/admin/:id/:hotelName/add-room" element={<AddRoomPage/>} />
         <Route path="/admin/:id/:locationName" element={<AdminLocation/>} />
+        <Route path="/user/forgetpassword" element={<ForgetPassword/>} />
 
       </Routes>
     </div>

@@ -63,7 +63,7 @@ const AdminAddHotel = () => {
   // };
 
   return (
- <div className='flex items-center justify-center  bg-gradient-to-r from-teal-500 to-indigo-500 h-screen w-full'>
+ <div className='flex items-center justify-center  bg-[#F7EFE5] h-screen w-full'>
 <div className='w-full fixed top-0'>
 <AdminNavBar/>
 

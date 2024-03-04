@@ -19,8 +19,9 @@ export function AuthProvider({ children }) {
   const [HotelForBooking, setHotelForBooking] = useState({});
   const [RoomId, setRoomId] = useState(0);
   const [AdminLocations, setAdminLocations] = useState([]);
-
-  const BASE_URL = 'https://hotelbackend.up.railway.app';
+  const [email,setEmail]=useState('');
+  // const BASE_URL = 'https://hotelbackend.up.railway.app';
+  const BASE_URL = 'http://localhost:9191';
 
   const value = {
     isAuthorized,
@@ -36,8 +37,14 @@ export function AuthProvider({ children }) {
     AdminLocations,
     getAdminLocations,
     adminSignIn,
-    BASE_URL
+    BASE_URL,
+    email,
+    SetEmailId
   };
+
+  function SetEmailId(id){
+    setEmail(id)
+  }
 
   function getHeaders() {
     const token = localStorage.getItem("token");
@@ -174,7 +181,7 @@ export function AuthProvider({ children }) {
         headers
       );
       setAdminLocations(response.data);
-      console.log("this is the all locations ", response.data);
+      console.log("this is the all locations here ", response.data);
     } catch (error) {
       console.log(error);
     }
