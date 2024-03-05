@@ -102,7 +102,7 @@ const handleSubmit = async (e) => {
               </div>
               <div className="md:w-[70%] ">
                 <p className="opacity-70 text-md text-white">
-                   password :  <NavLink to={formData.email.includes("@yahoo.com") || formData.email.includes("@gmail.com") ? "/user/forgetpassword":''} onClick={()=>{auth.SetEmailId(formData.email)}} className={"text-[#ffdd00] md:text-sm md:ml-[5.4rem] ml-7 text-xs"}>
+                   password :  <NavLink to={formData.email.includes("@yahoo.com") || formData.email.includes("@gmail.com") ? "/user/forgetpassword":''} onClick={()=>{auth.SetEmailId(formData.email)}} className={"text-[white]  md:text-sm md:ml-[5.3rem] ml-[7rem] font-bold text-xs"}>
                   forget password ?
                 </NavLink>
                 </p>
