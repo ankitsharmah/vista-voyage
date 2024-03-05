@@ -74,6 +74,7 @@ try {
           <div className='w-full h-screen flex justify-center items-center'>
           
           <div class="box">
+          {/* <p>Loading</p> */}
             <span></span>
             <span></span>
             <span></span>
