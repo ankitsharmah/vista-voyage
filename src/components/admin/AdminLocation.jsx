@@ -29,6 +29,22 @@ const AdminLocation = () => {
         console.error('Error fetching data:', error);
       }
     };
+
+    const deleteLocation =async (id)=>{
+      const headers = auth.getHeaders(); 
+     
+      if( !window.confirm('Are you sure you want to delete')){
+        return;
+      }
+      try {
+        const response = await axios.delete(`${auth.BASE_URL}/api/v1/admin/delete-by-id/${id}`,headers)
+        console.log("this is response ",response);
+        // alert("location has been deleted");
+        window.location.reload();
+      } catch (error) {
+        console.log("this is an error ",error)
+      }
+    }
   
     return (
       <div className='bg-[#F7EFE5] max-h-max w-full'>
@@ -44,10 +60,15 @@ const AdminLocation = () => {
             </div>
                       
             </div> :
-        <div className='flex flex-col  '> <h1 className='text-4xl mt-[] text-center  p-2 text-indigo-600 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
+        <div className='flex flex-col  '> 
+        <div className='flex gap-10 items-center justify-center'>
+        <h1 className='text-4xl mt-[] text-center  p-2 text-indigo-600 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
+                <button className="outline text-xs md:text-sm  h-10 outline-1 p-1 rounded-md text-rose-600" onClick={()=>deleteLocation(id)}><span>Delete </span>&#10060;</button>
+
+        </div>
         <div className='  min-h-[100vh]  flex  justify-center w-full  '>
        
-        <div className="flex flex-wrap itemsce  justify-center gap-2 w-[98%] md:w-full">
+        <div className="flex flex-wrap items-baseline  justify-center gap-2 w-[98%] md:w-full">
             {hotels.map((hotel) => (
               <AdminHotelCard key={hotel.hotelId} hotel={hotel} Id={id} lName={locationName} />
             ))}

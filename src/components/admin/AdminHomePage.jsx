@@ -46,21 +46,7 @@ const AdminHomePage = () => {
   }));
 };
 
-const deleteLocation =async (id)=>{
-  const headers = auth.getHeaders(); 
- 
-  if( !window.confirm('Are you sure you want to delete')){
-    return;
-  }
-  try {
-    const response = await axios.delete(`${auth.BASE_URL}/api/v1/admin/delete-by-id/${id}`,headers)
-    console.log("this is response ",response);
-    // alert("location has been deleted");
-    window.location.reload();
-  } catch (error) {
-    console.log("this is an error ",error)
-  }
-}
+
 // console.log("this is 0th index location name ",gotLocations[0].hotelsDTO.hotelName)
  const addLocation =async (e)=>{
   e.preventDefault();
@@ -181,7 +167,6 @@ const deleteLocation =async (id)=>{
                 <NavLink to={`/admin/${location.locationId}/${location.locationName}`} className={"md:text-3xl  text-xl text-wrap capitalize text-indigo-600 font-semibold"}>
                  {location.locationName}
                     </NavLink>
-                {/* <button className="outline text-xs outline-1 p-1 rounded-md text-rose-600" onClick={()=>deleteLocation(location.locationId)}><span>Delete </span>&#10060;</button> */}
          
             
                 </div>
