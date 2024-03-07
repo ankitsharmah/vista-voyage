@@ -77,7 +77,7 @@ const AdminLocation = () => {
 
                 </BsThreeDotsVertical>
                 {moreDropDown &&
-                    <div className='absolute gap-2 flex flex-col outline-1 outline rounded-sm outline-indigo-200 bg-white/60 p-3 top-12 right-[34%]'>
+                    <div className='absolute gap-2 flex flex-col outline-1 outline rounded-sm  z-20  outline-indigo-200 bg-white/60 p-3 top-12 right-[34%]'>
                     <button>Update</button>
                     <button  onClick={()=>deleteLocation(id)}>Delete</button>
                     <NavLink
