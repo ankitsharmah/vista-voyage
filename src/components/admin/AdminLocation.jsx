@@ -76,12 +76,12 @@ const AdminLocation = () => {
                 }}>
 
                 </BsThreeDotsVertical>
-                {moreDropDown &&
-                    <div className='absolute gap-2 flex flex-col outline-1 outline rounded-sm  z-20  outline-indigo-200 bg-white/60 p-3 top-12 right-[34%]'>
-                    <button>Update</button>
-                    <button  onClick={()=>deleteLocation(id)}>Delete</button>
+                {
+                    <div className={moreDropDown ? 'absolute flex gap-2 outline-1 outline rounded-sm  z-20  outline-indigo-200 bg-white p-3  right-[23%] duration-300 ease-in-out ':'absolute flex gap-2 outline-1 outline rounded-sm  z-20  outline-indigo-300 bg-white p-3  right-[23%]  duration-200 ease-in-out -translate-y-16 '}>
+                    <button className='hover:underline'>Update</button>
+                    <button className='hover:underline'  onClick={()=>deleteLocation(id)}>Delete</button>
                     <NavLink
-                    className={""} to={`/admin/${id}/${locationName}/add-hotel`} >
+                    className={"hover:underline"} to={`/admin/${id}/${locationName}/add-hotel`} >
                       <div className="">
                        
                          <p>add hotel</p>
