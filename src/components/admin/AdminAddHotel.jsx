@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AdminNavBar from './AdminNavBar';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const AdminAddHotel = () => {
@@ -78,10 +78,10 @@ const AdminAddHotel = () => {
             <span></span>
             <span></span>
           </div>
-        </div> :<div className=" h-full max-w-md w-full bg-white p-8 rounded-md shadow-md">
-        <div className=''>
+        </div> :<div className=" h-full max-w-md w-full relative bg-white p-8 rounded-md shadow-md">
+        <div className=' '>
           <h2 className=" text-center text-3xl font-extrabold text-gray-900">Add Hotel</h2>
-       
+          <NavLink className={"text-black text-ForgetPassword h-13 w-8  text-2xl  absolute top-0 right-0"} to={"/admin/home"}>&times;</NavLink>
         </div>
         <form className="mt-8 space-y-6" action="#" onSubmit={handleFormSubmit} method="POST">
           <div className="rounded-md shadow-sm -space-y-px">
