@@ -6,6 +6,8 @@ import AdminNavBar from './AdminNavBar';
 import AdminHotelCard from './AdminHotelCard';
 import { TfiPlus } from 'react-icons/tfi';
 import { useAuth } from '../context/AuthContext';
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { Dropdown } from 'bootstrap';
 
 const AdminLocation = () => {
     const auth = useAuth();
@@ -13,6 +15,7 @@ const AdminLocation = () => {
     const [hotels, setHotels] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [LId,setLId]=useState(id);
+    const [moreDropDown,SetMoreDropDown] = useState(false);
     useEffect(() => {
       fetchData();
     }, [id]);
@@ -45,6 +48,11 @@ const AdminLocation = () => {
         console.log("this is an error ",error)
       }
     }
+
+    function dropDown(){
+      console.log("called for drop down")
+      SetMoreDropDown(!moreDropDown);
+    }
   
     return (
       <div className='bg-[#F7EFE5] max-h-max w-full'>
@@ -61,10 +69,27 @@ const AdminLocation = () => {
                       
             </div> :
         <div className='flex flex-col  '> 
-        <div className='flex gap-10 items-center justify-center'>
-        <h1 className='text-4xl mt-[] text-center  p-2 text-indigo-600 capitalize font-bold border-b mb-3 '>Hotels in {locationName}</h1>
-                <button className="outline text-xs md:text-sm  h-10 outline-1 p-1 rounded-md text-rose-600" onClick={()=>deleteLocation(id)}><span>Delete </span>&#10060;</button>
+        <div className='flex gap-5 relative items-center bg-red-50 justify-center'>
+        <h1 className='text-4xl mt-[] text-center  p-2 text-indigo-600 capitalize font-bold border-b  '>Hotels in {locationName}</h1>
+                <BsThreeDotsVertical  className={"h-10 w-7 text-indigo-600 cursor-pointer"} onClick={()=>{
+                  dropDown()
+                }}>
 
+                </BsThreeDotsVertical>
+                {moreDropDown &&
+                    <div className='absolute gap-2 flex flex-col outline-1 outline rounded-sm outline-indigo-200 bg-white/60 p-3 top-12 right-[34%]'>
+                    <button>Update</button>
+                    <button  onClick={()=>deleteLocation(id)}>Delete</button>
+                    <NavLink
+                    className={""} to={`/admin/${id}/${locationName}/add-hotel`} >
+                      <div className="">
+                       
+                         <p>add hotel</p>
+                      </div>
+                    </NavLink>
+                   </div> 
+                  }
+                  
         </div>
         <div className='  min-h-[100vh]  flex  justify-center w-full  '>
        
@@ -72,12 +97,7 @@ const AdminLocation = () => {
             {hotels.map((hotel) => (
               <AdminHotelCard key={hotel.hotelId} hotel={hotel} Id={id} lName={locationName} />
             ))}
-            <NavLink
-                    className={"outline-black/30 ml-2 bg-gray-100 rounded-md  outline flex items-center justify-center hover:bg-gray-300 backdrop-blur-lg  text-white font-bold w-[23%] h-[2.3rem] md:w-[5%] md:h-[10%]"} to={`/admin/${id}/${locationName}/add-hotel`} >
-                      <div className="border-2 border-dashed h-[2rem] w-[2rem] md:h-[3rem] md:w-[3rem] border-gray-50  flex items-center justify-center">
-                        <TfiPlus className="md:h-[2.4rem] text-black md:w-[2.4rem]" />
-                      </div>
-                    </NavLink>
+           
           </div>
         </div>
         </div>
