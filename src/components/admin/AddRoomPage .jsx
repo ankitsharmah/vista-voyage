@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AdminNavBar from './AdminNavBar';
-import { useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
@@ -66,11 +66,14 @@ const AddRoomPage = () => {
   return (
     <div>
       <AdminNavBar />
-      <div className="min-h-screen  flex items-center justify-center bg-[#F7EFE5]">
-        <div className="max-w-md w-full bg-white p-2 md:p-8 rounded-md shadow-md">
+      <div className="min-h-screen   flex items-center justify-center bg-[#F7EFE5]">
+
+        <div className="max-w-md w-full relative bg-white p-2 md:p-8 rounded-md shadow-md">
           <div>
             <h2 className="mt-2 md:mt-6 text-center text-xl md:text-3xl font-extrabold text-gray-900">Add Room</h2>
           </div>
+      <NavLink className={"text-black text-ForgetPassword h-13 w-8  text-2xl  absolute top-0 right-0"} to={"/admin/home"}>&times;</NavLink>
+
           <form className="mt-2 md:mt-8 space-y-6" action="#" method="POST">
             <div className="rounded-md shadow-sm -space-y-px">
               <div>

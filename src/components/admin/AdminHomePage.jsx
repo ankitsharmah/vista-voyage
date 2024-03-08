@@ -112,6 +112,7 @@ const AdminHomePage = () => {
       ) : authorized ? (
         <>
           <div  className="min-h-screen   p-3">
+          
           <div className="w-full  flex mb-4  ">
           <input
                 type="text"
@@ -122,7 +123,7 @@ const AdminHomePage = () => {
             />
             <button onClick={()=>filtering()} className="bg-[#ffc336f7] hover:bg-yellow-500 text-white w-[13rem] ">search</button>
           </div>
-          <div className={clickedToAdd ? "text-center z-10 w-[80%] left-[10%] md:w-[24rem] md:h-[8rem] backdrop-blur-md bg-white/30 transition-all duration-300   md:left-[40%] self-center ease-in-out rounded-md absolute mb-3 flex items-center justify-center -translate-y-48 " : "text-center z-10 md:w-[24rem] md:h-[8rem] backdrop-blur-md bg-white/30 transition-all duration-300 translate-y-[70%]  md:left-[40%] self-center w-[80%] h-[12rem] left-[10%] ease-in-out top-16 fixed rounded-md flex items-center justify-center"}>
+          <div className={clickedToAdd ? "text-center z-10 w-[80%] left-[10%] md:w-[24rem] md:h-[8rem] outline outline-1 outline-gray-300 backdrop-blur-md bg-white/30 transition-all duration-300   md:left-[40%] self-center ease-in-out rounded-md absolute mb-3 flex items-center justify-center -translate-y-48 " : "text-center z-10 md:w-[24rem] md:h-[8rem] backdrop-blur-md bg-white/30 transition-all duration-300 translate-y-[70%]  md:left-[40%] outline outline-1 outline-gray-300 self-center w-[80%] h-[12rem] left-[10%] ease-in-out top-16 fixed rounded-md flex items-center justify-center"}>
             
             <input
                 type="text"

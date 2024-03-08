@@ -32,7 +32,11 @@ const SignupPage = ({ setLoggedInUser }) => {
   }
 
   const saving = async () => {
-    if (formData.password === confPass) {
+      if(!formData.email.toLowerCase().includes('@gmail.com') ){
+          alert('please choose valid email address')
+          return;
+      }
+   else if (formData.password === confPass ) {
       try {
         // setLoading(true);
     
