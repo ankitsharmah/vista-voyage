@@ -20,8 +20,8 @@ export function AuthProvider({ children }) {
   const [RoomId, setRoomId] = useState(0);
   const [AdminLocations, setAdminLocations] = useState([]);
   const [email,setEmail]=useState('');
-  // const BASE_URL = 'https://hotelbackend.up.railway.app';
-  const BASE_URL = 'http://localhost:9191';
+  const BASE_URL = 'https://hotelbackend.up.railway.app';
+  // const BASE_URL = 'http://localhost:9191';
 
   const value = {
     isAuthorized,
