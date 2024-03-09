@@ -53,6 +53,7 @@ const Hotel = () => {
                     
           </div>}
           <div className='block md:flex '>
+          <div className='bg-red-200 w-80 h-56 object-cover  rounded-md mr-8 '>
           <img
               src={hotelData.imageUrl}
               alt={hotelData.hotelName}
@@ -60,6 +61,7 @@ const Hotel = () => {
               onLoad={() => setLoading(false)}
               onError={() => setLoading(false)}
             />
+          </div>
             <div>
               <h1 className="text-2xl md:text-4xl mt-1 md:mt-0  font-bold mb-2">{hotelData.hotelName}</h1>
               <p className="text-gray-600">{hotelData.address}</p>

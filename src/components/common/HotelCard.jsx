@@ -9,11 +9,13 @@ console.log("use params rendering",id,locationName)
     console.log(hotel);
   return (
     <div className="w-[90%] p-1 md:w-[23%] group cursor-pointer  md:m-3 flex flex-col md:gap-2 h-[max-content] overflow-hidden bg-white shadow-lg rounded-md transition-transform duration-300 transform ">
+    <div className='bg-red-200 w-full h-40 md:h-48  object-cover rounded-t-md transition-transform duration-250 transform group-hover:scale-[1.09]'>
       <img
         src={hotel.imageUrl}
         alt={hotel.hotelName}
         className="w-full h-40 md:h-48  object-cover rounded-t-md transition-transform duration-250 transform group-hover:scale-[1.09]"
       />
+    </div>
       <div className=" py-2 md:px-6 md:py-4">
         <div className="md:mb-2">
           <h2 className="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 capitalize">
