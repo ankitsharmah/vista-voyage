@@ -20,7 +20,11 @@ const Location = () => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`${auth.BASE_URL}/api/v1/locations/location/${id}`);
+      const response = await axios.get(`${auth.BASE_URL}/api/v1/locations/location/${id}`,{
+        headers: {
+            'ngrok-skip-browser-warning': 'true'
+        }
+    });
       setHotels(response.data.hotels);
     //   console.log("called");
       setIsLoading(false);

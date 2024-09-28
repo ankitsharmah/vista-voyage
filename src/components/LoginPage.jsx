@@ -48,7 +48,11 @@ const handleSubmit = async (e) => {
 
   try {
     console.log("this is : ",localStorage.getItem('token'))
-    const response = await axiosInstance.post("/api/v1/auth/authentication", formData);
+    const response = await axiosInstance.post("/api/v1/auth/authentication", formData,{
+      headers: {
+          'ngrok-skip-browser-warning': 'true'
+      }
+  });
     localStorage.setItem('token', response.data.token);
 
     if (response.data!=null) {

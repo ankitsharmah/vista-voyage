@@ -27,7 +27,11 @@ const Login = () => {
     e.preventDefault();
 console.log("this is formData ",formData)
     try {
-      const res=await axios.post(`${auth.BASE_URL}/api/v1/auth/authentication`,formData)
+      const res=await axios.post(`${auth.BASE_URL}/api/v1/auth/authentication`,formData,{
+        headers: {
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
       localStorage.setItem('token',res.data.token)
     auth.adminSignIn(res.data.token);
 

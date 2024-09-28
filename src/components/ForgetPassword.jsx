@@ -28,7 +28,11 @@ const ForgetPassword = () => {
       if (formData.password === formData.confirmPassword) {
         try {
             console.log('this is emailid and  foremdata ',formData," ",auth.email)
-            const res = await axios.put(`${auth.BASE_URL}/api/v1/locations/forget/${auth.email}`,formData)
+            const res = await axios.put(`${auth.BASE_URL}/api/v1/locations/forget/${auth.email}`,formData,{
+              headers: {
+                  'ngrok-skip-browser-warning': 'true'
+              }
+          })
             alert('password has upated successfully');
             navigate('/login');
         } catch (error) {

@@ -22,7 +22,11 @@ const Hotel = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(`${auth.BASE_URL}/api/v1/hotels/hotel-by-id/${hotelId}`);
-      console.log("this is response data of hotel by id : ",response.data);
+      console.log("this is response data of hotel by id : ",response.data,{
+        headers: {
+            'ngrok-skip-browser-warning': 'true'
+        }
+    });
       setHotelData(response.data);
     } catch (error) {
       console.error(error);
