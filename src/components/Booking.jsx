@@ -72,7 +72,7 @@ const Booking = () => {
           setIsLoading(false);
             console.log("Response:", response.data);
           navigate(`/reservations/${auth.userdata.userId}`);
-           
+
          
         } catch (error) {
           if (error.response && error.response.data) {

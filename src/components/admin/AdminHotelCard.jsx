@@ -16,9 +16,16 @@ console.log("use params rendering",id,locationName)
       />
       <div className=" py-2 md:px-6 md:py-2">
         <div className="md:mb-2">
-          <h2 className="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 capitalize">
+        <div>
+        <h2 className="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 capitalize">
             {hotel.hotelName}
           </h2>
+          <h2 className="text-xl font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 capitalize">
+            {hotel.length}
+          </h2>
+        </div>
+         
+
           <p className="text-sm flex text-gray-600">Rating: {hotel.rating} <span className='flex justify-center pl-1 items-center text-yellow-500/80'><FaStar />
           </span></p>
         </div>

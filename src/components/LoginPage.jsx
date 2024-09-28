@@ -50,10 +50,6 @@ const handleSubmit = async (e) => {
     console.log("this is : ",localStorage.getItem('token'))
     const response = await axiosInstance.post("/api/v1/auth/authentication", formData);
     localStorage.setItem('token', response.data.token);
-    auth.SignIn(response.data.token);
-    // console.log( "this is response",response.data);
-    // console.log( "this is local",localStorage.getItem('token'));
-   
 
     if (response.data!=null) {
       // Handle successful login

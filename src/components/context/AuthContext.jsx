@@ -10,7 +10,7 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
+export function AuthProvider({ children }) { 
   const navigate = useNavigate();
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [AdminIsAuthorized, setAdminIsAuthorized] = useState(false);
@@ -20,8 +20,8 @@ export function AuthProvider({ children }) {
   const [RoomId, setRoomId] = useState(0);
   const [AdminLocations, setAdminLocations] = useState([]);
   const [email,setEmail]=useState('');
-  const BASE_URL = 'https://hotelbackend.up.railway.app';
-  // const BASE_URL = 'http://localhost:9191';
+  // const BASE_URL = 'https://hotelbackend.up.railway.app';
+  const BASE_URL = 'https://9152-45-115-255-58.ngrok-free.app';
 
   const value = {
     isAuthorized,
@@ -51,6 +51,7 @@ export function AuthProvider({ children }) {
     return {
       headers: {
         Authorization: `Bearer ${token}`,
+        'ngrok-skip-browser-warning': 'true'
       },
     };
   }
@@ -60,7 +61,11 @@ export function AuthProvider({ children }) {
   function fetchDataFromApi() {
     // console.log(`${BASE_URL}/api/v1/locations`)
     axios
-      .get(`${BASE_URL}/api/v1/locations`)
+      .get(`${BASE_URL}/api/v1/locations`, {
+        headers: {
+            'ngrok-skip-browser-warning': 'true'
+        }
+    })
       .then((response) => {
         setLocationData(response.data);
         // console.log("Response:", response.data);

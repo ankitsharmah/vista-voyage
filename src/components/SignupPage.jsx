@@ -48,7 +48,7 @@ const SignupPage = ({ setLoggedInUser }) => {
         console.log("this is token : ",response.data.token)
 
         auth.SignIn(response.data.token);
-        navigate('/')
+        navigate('/login')
   
         // fetchData();
    
