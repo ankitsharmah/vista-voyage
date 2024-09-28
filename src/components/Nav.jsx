@@ -195,12 +195,51 @@ const Nav = () => {
                   >
                     Login
                   </NavLink>
+
                   <NavLink
                     to={"/signup"}
                     className={"text-black font-semibold hover:underline"}
                   >
                     Sign Up
                   </NavLink>
+                          <div className="text-black md:flex  gap-4 mid-menu ">
+          <NavLink className={"font-semibold h-full hover:underline"} to={"/"}>
+            Home
+          </NavLink>
+
+          <div className="relative h-full">
+            <NavLink
+              onClick={() => setIsOpen((prev) => !prev)}
+              className={"font-semibold h-full hover:underline"}
+            >
+              Location
+            </NavLink>
+            {isOpen && (
+              <div className="absolute l  top-full right-[1px] w-32 p-4 bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg rounded shadow-md overflow-y-auto max-h-[10rem]">
+                {locationData
+                  .slice() // Shallow copy of the array
+                  .sort((a, b) =>
+                    a.locationName.localeCompare(b.locationName, undefined, {
+                      sensitivity: "base",
+                    })
+                  ) // Sort alphabetically
+                  .map((location) => (
+                    <NavLink
+                      className="block py-1 text-gray-700 no-underline capitalize hover:bg-gray-200"
+                      key={location.locationId}
+                      to={`/location/${location.locationId}/${location.locationName}`}
+                    >
+                      {location.locationName}
+                    </NavLink>
+                  ))}
+              </div>
+            )}
+          </div>
+          <a href="#service" className="font-semibold hover:underline">
+            Service
+          </a>
+          
+        </div>
                 </div>
               )}
             </div>
