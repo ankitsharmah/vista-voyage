@@ -22,7 +22,7 @@ const Location = () => {
     try {
       const response = await axios.get(`${auth.BASE_URL}/api/v1/locations/location/${id}`,{
         headers: {
-            'ngrok-skip-browser-warning': 'true'
+            'zrok-skip-browser-warning': 'true'
         }
     });
       setHotels(response.data.hotels);

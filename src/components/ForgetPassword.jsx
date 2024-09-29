@@ -30,7 +30,7 @@ const ForgetPassword = () => {
             console.log('this is emailid and  foremdata ',formData," ",auth.email)
             const res = await axios.put(`${auth.BASE_URL}/api/v1/locations/forget/${auth.email}`,formData,{
               headers: {
-                  'ngrok-skip-browser-warning': 'true'
+                  'zrok-skip-browser-warning': 'true'
               }
           })
             alert('password has upated successfully');

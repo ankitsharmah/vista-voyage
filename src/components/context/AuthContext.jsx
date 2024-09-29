@@ -21,7 +21,8 @@ export function AuthProvider({ children }) {
   const [AdminLocations, setAdminLocations] = useState([]);
   const [email,setEmail]=useState('');
   // const BASE_URL = 'https://hotelbackend.up.railway.app';
-  const BASE_URL = 'https://9152-45-115-255-58.ngrok-free.app';
+  const BASE_URL = 'https://5ypoda8bwjfg.share.zrok.io';
+  // const BASE_URL = 'https://9152-45-115-255-58.ngrok-free.app';
 
   const value = {
     isAuthorized,
@@ -51,7 +52,7 @@ export function AuthProvider({ children }) {
     return {
       headers: {
         Authorization: `Bearer ${token}`,
-        'ngrok-skip-browser-warning': 'true'
+        'zrok-skip-browser-warning': 'true'
       },
     };
   }
@@ -63,7 +64,7 @@ export function AuthProvider({ children }) {
     axios
       .get(`${BASE_URL}/api/v1/locations`, {
         headers: {
-            'ngrok-skip-browser-warning': 'true'
+            'zrok-skip-browser-warning': 'true'
         }
     })
       .then((response) => {

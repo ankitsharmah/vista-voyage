@@ -43,7 +43,7 @@ const SignupPage = ({ setLoggedInUser }) => {
         // Wait for the response from the server
         const response = await axios.post(`${auth.BASE_URL}/api/v1/auth/register`, formData,{
           headers: {
-              'ngrok-skip-browser-warning': 'true'
+              'zrok-skip-browser-warning': 'true'
           }
       });
     

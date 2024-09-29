@@ -23,7 +23,7 @@ const Hotel = () => {
     try {
       const response = await axios.get(`${auth.BASE_URL}/api/v1/hotels/hotel-by-id/${hotelId}`,{
         headers: {
-          'ngrok-skip-browser-warning': 'true'
+          'zrok-skip-browser-warning': 'true'
       }
       });
       console.log("this is response data of hotel by id : ",response.data,{

@@ -50,7 +50,7 @@ const handleSubmit = async (e) => {
     console.log("this is : ",localStorage.getItem('token'))
     const response = await axiosInstance.post("/api/v1/auth/authentication", formData,{
       headers: {
-          'ngrok-skip-browser-warning': 'true'
+          'zrok-skip-browser-warning': 'true'
       }
   });
     localStorage.setItem('token', response.data.token);
