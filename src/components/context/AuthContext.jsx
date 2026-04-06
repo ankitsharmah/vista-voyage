@@ -60,7 +60,7 @@ export function AuthProvider({ children }) {
     fetchDataFromApi();
   }, []);
   function fetchDataFromApi() {
-    // console.log(`${BASE_URL}/api/v1/locations`)
+    console.log("base ",`${BASE_URL}/api/v1/locations`)
     axios
       .get(`${BASE_URL}/api/v1/locations`, {
         headers: {
