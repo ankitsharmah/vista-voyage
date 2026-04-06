@@ -15,7 +15,7 @@ const Location = () => {
   useEffect(() => {
     fetchData();
   }, [id]);
-  console.log(id);
+  console.log(auth.BASE_URL);
 
   const fetchData = async () => {
     setIsLoading(true);
