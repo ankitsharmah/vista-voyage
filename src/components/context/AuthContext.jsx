@@ -57,10 +57,11 @@ export function AuthProvider({ children }) {
     };
   }
   useEffect(() => {
+        console.log("base ",`${BASE_URL}/api/v1/locations`)
+
     fetchDataFromApi();
   }, []);
   function fetchDataFromApi() {
-    console.log("base ",`${BASE_URL}/api/v1/locations`)
     axios
       .get(`${BASE_URL}/api/v1/locations`, {
         headers: {
@@ -86,6 +87,8 @@ export function AuthProvider({ children }) {
       // SignOut(); // Logout the user if token is expired
     } else {
       // Token is valid or not present, continue with your component logic
+          console.log("base ",`${BASE_URL}/api/v1/locations`)
+
       console.log("Token is valid");
       console.log(localStorage.getItem("token"));
       if(!localStorage.getItem("token")){
