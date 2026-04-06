@@ -21,8 +21,8 @@ export function AuthProvider({ children }) {
   const [AdminLocations, setAdminLocations] = useState([]);
   const [email,setEmail]=useState('');
   // const BASE_URL = 'https://hotelbackend.up.railway.app';
-  const BASE_URL = 'https://5ypoda8bwjfg.share.zrok.io';
-  // const BASE_URL = 'https://9152-45-115-255-58.ngrok-free.app';
+  // const BASE_URL = 'http://localhost:9191';
+  const BASE_URL = 'https://vista-voyage-api-latest.onrender.com';
 
   const value = {
     isAuthorized,

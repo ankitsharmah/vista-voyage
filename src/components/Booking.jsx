@@ -5,8 +5,7 @@ import { GiAxeInStump } from 'react-icons/gi';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Nav from './Nav';
-import { Redirect } from 'react-router-dom';
-
+ 
 const Booking = () => {
   const navigate = useNavigate();
   const {roomId}=useParams();

@@ -19,7 +19,7 @@ import ForgetPassword from "./components/ForgetPassword";
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [location,setLocation] =  useState(null);
-  
+console.log("App rendering");
   return (
     
     <div className="">

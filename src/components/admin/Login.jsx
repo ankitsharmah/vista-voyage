@@ -40,13 +40,13 @@ console.log("this is formData ",formData)
       console.log("this is an error sir ",error)
     }
     // Basic validation
-    // if (email === 'admin@gmil.com' && password === 'admin') {
-    //   // Successful login, you can redirect to the admin dashboard or perform other actions
-    //   console.log('Login successful');
-    // } else {
-    //   // Display error message for unsuccessful login
-    //   setError('Invalid username or password');
-    // }
+    if (email === 'admin@gmil.com' && password === 'admin') {
+      // Successful login, you can redirect to the admin dashboard or perform other actions
+      console.log('Login successful');
+    } else {
+      // Display error message for unsuccessful login
+      setError('Invalid username or password');
+    }
   };
 
   return (
